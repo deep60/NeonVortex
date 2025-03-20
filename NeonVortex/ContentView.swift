@@ -22,14 +22,26 @@ struct HomeView: View {
             VStack {
                 TopMenuView()
                 
-                SpeedTextView()
+                Spacer()
                 
-                ProgressView()
+                ConnectingTimeView()
                 
-                //StartStopButtonView()
+                DownloadUploadView()
+                
+                CountryView(region: Data.regions[0])
+                
+                Spacer()
+                
+                Button(action: {
+                    
+                }, label: {
+                    StartStopButtonView()
+                })
+                
+                Spacer()
             }
             .foregroundStyle(.white)
-            .padding(.horizontal)
+            //.padding(.horizontal)
         }
     }
 }
