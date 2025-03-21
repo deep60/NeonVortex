@@ -9,42 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HomeView()
+        HomeDisconnectView()
     }
 }
 
-struct HomeView: View {
-    var body: some View {
-        ZStack {
-            Color.appPrimary
-                .ignoresSafeArea()
-            
-            VStack {
-                TopMenuView()
-                
-                Spacer()
-                
-                ConnectingTimeView()
-                
-                DownloadUploadView()
-                
-                CountryView(region: Data.regions[0])
-                
-                Spacer()
-                
-                Button(action: {
-                    
-                }, label: {
-                    StartStopButtonView()
-                })
-                
-                Spacer()
-            }
-            .foregroundStyle(.white)
-            //.padding(.horizontal)
-        }
-    }
-}
+
 
 struct SideMenuView: View {
     var body: some View {
@@ -67,6 +36,7 @@ extension Color {
     static let viewBottom = Color.init(red: 104/255, green: 36/255, blue: 242/255)
     static let stopColor = Color.init(red: 250/255, green: 140/255, blue: 82/255)
     static let powerButton = Color.init(red: 129/255, green: 108/255, blue: 255/255)
+    static let disBg = Color.init(red: 47/255, green: 47/255, blue: 54/255)
 }
 
 extension UIScreen {
