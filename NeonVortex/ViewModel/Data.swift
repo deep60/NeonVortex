@@ -14,6 +14,12 @@ enum ConnectionStatus: String, Codable {
     case error
 }
 
+struct MenuItem: Identifiable {
+    let id = UUID()
+    let name: String
+    let imageName: String
+}
+
 struct Region: Identifiable, Codable {
     var id = UUID()
     var name: String
@@ -71,5 +77,13 @@ struct Data {
             VPNServer(ipAddress: "172.16.0.10", city: "Toronto", load: 5, isRecommended: true),
             VPNServer(ipAddress: "172.16.0.11", city: "Vancouver", load: 3, isRecommended: false),
         ], ipAddress: "172.16.0.10"),
+    ]
+    
+    static let menus = [
+        MenuItem(name: "Apps using VPN", imageName: "icloud.and.arrow.down"),
+        MenuItem(name: "Rate us", imageName: "star"),
+        MenuItem(name: "Support", imageName: "questionmark.circle"),
+        MenuItem(name: "Settings", imageName: "gearshape")
+        
     ]
 }

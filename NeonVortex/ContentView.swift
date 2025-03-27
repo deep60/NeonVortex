@@ -9,16 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HomeDisconnectView()
-    }
-}
-
-
-
-struct SideMenuView: View {
-    var body: some View {
-        ZStack {
-        }
+        HomeConnectView()
     }
 }
 
@@ -37,6 +28,8 @@ extension Color {
     static let stopColor = Color.init(red: 250/255, green: 140/255, blue: 82/255)
     static let powerButton = Color.init(red: 129/255, green: 108/255, blue: 255/255)
     static let disBg = Color.init(red: 47/255, green: 47/255, blue: 54/255)
+    static let speedTestbg = Color.init(red: 40/255, green: 31/255, blue: 97/255)
+    static let goButton = Color.init(red: 84/255, green: 60/255, blue: 195/255)
 }
 
 extension UIScreen {
